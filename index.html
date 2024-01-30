@@ -9,12 +9,36 @@
     <link rel="stylesheet" href="resource/css/style.css">
     <!-- import icon -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- import animation -->
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
 </head>
 <body>
 
-    <main>
+    <main id="box">
+        <picture class="box-image">
+            <img src="resource/img/ocean.webp" alt="img">
+        </picture>
 
+        <audio id="audio-natureza" src="resource/audios/ocean-waves-112906.mp3"></audio>
+
+        <h1>Album title</h1>
+        <p>cantor name</p>
     </main>
+
+    <footer id="control">
+        <button class="button" id="prev">
+            <i class="ph-bold ph-skip-back"></i>
+        </button>
+
+        <button class="button" id="play-pause">
+            <!-- <i class="ph-bold ph-pause"></i> -->
+            <i class="ph-bold ph-play"></i>
+        </button>
+
+        <button class="button" id="next">
+            <i class="ph-bold ph-skip-forward"></i>
+        </button>
+    </footer>
     
     <script src="resource/js/script.js"></script>
 </body>
