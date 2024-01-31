@@ -13,25 +13,59 @@ body {
     background: $green;
     width: 100%;
     height: 100vh;
-    animation: bg-pan-top 8s both;
+    overflow: hidden;
+    
+    #image-container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+
+        .img:nth-child(1) {
+            position: absolute;
+            top: 4rem;
+            right: 35rem;
+            z-index: -1;
+            opacity: .3;
+            width: 3rem;
+            rotate: 20deg;
+            animation: slide 2s infinite alternate ease-in-out;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .img:nth-child(2) {
+            position: absolute;
+            top: 4rem;
+            left: 35rem;
+            z-index: -1;
+            opacity: .3;
+            width: 3rem;
+            rotate: -10deg;
+            animation: slide 1.5s infinite alternate ease-in-out;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 #box {
     @include align(column, start, center, 2rem);
     background-color: $white-10;
-    border: .6rem solid $dark-20;
     position: relative;
-    width: 29rem;
+    width: 24rem;
     height: 29rem;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     box-shadow: $shadow-60;
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center;
 
     .box-image {
-        width: 20rem;
+        width: 18rem;
         border-radius: 1rem;
-        box-shadow: $shadow-60;
 
         img {
             width: 100%;
@@ -42,33 +76,32 @@ body {
 
     h1 {
         position: absolute;
-        bottom: 3rem;
-        color: $dark-30;
-        font-size: 2.7rem;
+        bottom: 5rem;
+        color: $dark-10;
+        font-size: 3.3rem;
         font-weight: 700;
     }
 
     p {
         position: absolute;
-        bottom: 1.5rem;
-        color: $dark-20;
-        font-size: 1.4rem;
-        opacity: .6;
+        bottom: 3rem;
+        color: $dark-10;
+        font-size: 1.5rem;
+        opacity: .3;
     }
 }
 
 #control {
-    @include align(row, space-evenly, center, 4rem);
-    background-color: $dark-20;
+    @include align(row, space-evenly, center, 1rem);
+    background-color: $white-10;
     height: 7rem;
-    width: 29rem;
+    width: 24rem;
     border-radius: 2rem;
-
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center;
+    box-shadow: $shadow-60;
 
     .button:nth-child(1) {
-        background-color: $white-10;
-        color: $dark-20;
+        background-color: transparent;
+        color: $dark-10;
         border: none;
         outline: none;
         height: 4rem;
@@ -77,13 +110,13 @@ body {
         cursor: pointer;
 
         i {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 
     .button:nth-child(2) {
-        background-color: $white-10;
-        color: $dark-20;
+        background-color: transparent;
+        color: $dark-10;
         border: none;
         outline: none;
         height: 4rem;
@@ -91,13 +124,13 @@ body {
         cursor: pointer;
 
         i {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 
     .button:nth-child(3) {
-        background-color: $white-10;
-        color: $dark-20;
+        background-color: transparent;
+        color: $dark-10;
         border: none;
         outline: none;
         height: 4rem;
@@ -106,17 +139,16 @@ body {
         cursor: pointer;
 
         i {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 }
 
-@keyframes square-in-center {
-    from {
-        clip-path: inset(100% 100% 100% 100%);
+@keyframes slide {
+    0% {
+        transform: translateY(0);
     }
-
-    to {
-        clip-path: inset(0 0 0 0);
+    100% {
+        transform: translateY(-1.5rem);
     }
 }
