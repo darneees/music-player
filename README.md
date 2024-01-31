@@ -2,6 +2,8 @@
   Music Player
 </h1>
 
+![banner](https://github.com/darneees/music-player/assets/79709843/4ff7a824-8865-4da2-839f-2fc530223456)
+
 
 ## ✔️ Tecnologias utilizadas:
 
