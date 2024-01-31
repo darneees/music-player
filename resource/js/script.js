@@ -36,7 +36,7 @@ function soundPrev() {
     } else {
         type -= 1;
     }
-    audio.src = "books/dom-casmurro/" + type + ".mp3";
+    sound.src = "resource/audios/" + type +".mp3";
     playSound();
 }
 
