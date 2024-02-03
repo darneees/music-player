@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: relative;
   background: #e5eee0;
   width: 100%;
   height: 100vh;
@@ -59,14 +60,15 @@ body #image-container .img:nth-child(2) img {
   background-color: #F2F2F2;
   position: relative;
   width: 24rem;
-  height: 29rem;
+  height: 25rem;
   border-radius: 2rem;
   padding: 3rem 2rem 2rem 2rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
 }
 #box .box-image {
-  width: 18rem;
+  width: 90%;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
 }
 #box .box-image img {
   width: 100%;
@@ -75,25 +77,18 @@ body #image-container .img:nth-child(2) img {
 }
 #box h1 {
   position: absolute;
-  bottom: 5rem;
-  color: #17171A;
+  bottom: 2rem;
+  color: #35353a;
   font-size: 3.3rem;
   font-weight: 700;
-}
-#box p {
-  position: absolute;
-  bottom: 3rem;
-  color: #17171A;
-  font-size: 1.5rem;
-  opacity: 0.3;
 }
 
 #control {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   background-color: #F2F2F2;
   height: 7rem;
   width: 24rem;
@@ -145,5 +140,31 @@ body #image-container .img:nth-child(2) img {
   }
   100% {
     transform: translateY(-1.5rem);
+  }
+}
+@media (max-width: 429px) {
+  body #image-container .img:nth-child(1) {
+    top: 89%;
+    right: 2rem;
+    width: 3rem;
+  }
+  body #image-container .img:nth-child(2) {
+    top: 5%;
+    left: 2rem;
+    width: 4rem;
+  }
+  #box {
+    width: 85%;
+  }
+  #box h1 {
+    font-size: 2.5rem;
+  }
+  #control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 85%;
   }
 }/*# sourceMappingURL=style.css.map */

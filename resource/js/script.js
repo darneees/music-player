@@ -1,4 +1,6 @@
 const sound = document.getElementById("sound-nature");
+const soundName = document.getElementById("sound-name");
+const image = document.getElementById("change-image");
 const prev = document.getElementById("prev");
 const playPause = document.getElementById("play-pause");
 const next = document.getElementById("next");
@@ -7,6 +9,33 @@ const change = document.getElementById("change-image");
 const quantSounds = 6;
 let played = false;
 let type = 1;
+
+const ocean = {
+    name: "Ocean"
+}
+
+const jungle = {
+    name: "Jungle"
+}
+
+const night = {
+    name: "Night"
+}
+
+const river  = {
+    name: "River"
+}
+
+const rain = {
+    name: "Rain"
+}
+
+const thunder = {
+    name: "Thunder"
+}
+
+const soundOptions = [ocean, jungle, night, river, rain, thunder];
+
 
 function playSound() {
     playPause.classList.remove("ph-play");
@@ -37,6 +66,8 @@ function soundPrev() {
         type -= 1;
     }
     sound.src = "resource/audios/" + type +".mp3";
+    image.src = "resource/img/nature/" + type +".webp";
+    soundName.innerHTML = soundOptions[type - 1].name;
     playSound();
 }
 
@@ -47,6 +78,8 @@ function soundNext() {
         type = 1;
     }
     sound.src = "resource/audios/" + type +".mp3";
+    image.src = "resource/img/nature/" + type +".webp";
+    soundName.innerHTML = soundOptions[type - 1].name;
     playSound();
 }
 
